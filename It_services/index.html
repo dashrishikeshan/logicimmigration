@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Under Development</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ANIMATED BACKGROUND */
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(120deg, #002b7f, #005cff, #00aaff);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* FLOATING CIRCLES */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.25;
+    animation: floatCircle 12s linear infinite;
+}
+
+@keyframes floatCircle {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-120vh);}
+}
+
+.circle:nth-child(1) {
+    width: 120px; height: 120px;
+    left: 10%; bottom: -150px;
+    background: #ffffff;
+    animation-duration: 15s;
+}
+.circle:nth-child(2) {
+    width: 80px; height: 80px;
+    left: 40%; bottom: -150px;
+    background: #f2f2f2;
+    animation-duration: 11s;
+}
+.circle:nth-child(3) {
+    width: 140px; height: 140px;
+    left: 70%; bottom: -150px;
+    background: #dff2ff;
+    animation-duration: 17s;
+}
+.circle:nth-child(4) {
+    width: 50px; height: 50px;
+    left: 85%; bottom: -150px;
+    background: #e5f3ff;
+    animation-duration: 9s;
+}
+
+/* CONTENT CARD */
+.container {
+    text-align: center;
+    z-index: 10;
+    animation: fadeIn 2s ease forwards;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(30px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* TYPEWRITER TEXT */
+.typewriter {
+    display: inline-block;
+    border-right: 3px solid #fff;
+    font-size: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation:
+        typing 6s steps(40, end) forwards,
+        blink 0.8s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 365px; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* SPINNER */
+.loader {
+    margin: 35px auto 0;
+    width: 70px;
+    height: 70px;
+    border: 6px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- FLOATING SHAPES -->
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <h1>Website Under Development</h1>
+    <div class="typewriter">We are building something amazing...</div>
+
+    <p>Please check back soon.</p>
+
+    <div class="loader"></div>
+</div>
+
+</body>
+</html>

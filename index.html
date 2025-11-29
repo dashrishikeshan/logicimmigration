@@ -1,53 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dymI6z0MsQXwUuYg1+QG6/ZxU6S8Bjjl6gE466+vWXTjhBMWrMUR3pvN8I2c2MvmFo0xSg6u40qCMgfHdC6Ykg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Global Immigration</title>
+    <title>Logic Immigration & <i class="bi bi-laptop icon"></i>
+            <i class="bi bi-phone icon"></i>
+            <i class="bi bi-hdd-network icon"></i>
+            IT Services</title>
+
+    <script src="https://kit.fontawesome.com/a7d3b8a07e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="bg-animated"></div>
 
-    <!-- NAVBAR -->
-    <nav class="nav" id="navbar">
-        <div class="nav-logo">Logic Immigration</div>
-
-        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
-
-        <ul class="nav-menu" id="menuList">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="study.html">Study Abroad</a></li>
-            <li><a href="work.html">Work Abroad</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="world-map"></div>
-
-        <div class="hero-content">
-            <h1>Explore Global Study & Work Opportunities</h1>
-            <p>
-                Professional immigration guidance, international study admissions,
-                work permits, and career opportunities across the world.
-            </p>
-            <button>Start Your Journey</button>
+    <div class="container">
+        <div class="left" onclick="location.href='Immigration/index.html'">
+            <i class="fas fa-plane-departure icon"></i>
+            <i class="bi bi-globe2 icon"></i>
+            Immigration Services
         </div>
-    </section>
 
-    <script>
-        const navbar = document.getElementById("navbar");
-        window.addEventListener("scroll", () => {
-            navbar.classList.toggle("scrolled", window.scrollY > 40);
-        });
-
-        const menu = document.getElementById("menuList");
-        function toggleMenu() {
-            menu.classList.toggle("show");
-        }
-    </script>
-
+        <div class="right" onclick="location.href='It_services/index.html'">
+            <i class="bi bi-hdd-network-fill icon"></i>
+            IT Services
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Immigration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="nav" id="navbar">
+        <div class="nav-logo">Logic Immigration</div>
+
+        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-menu" id="menuList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="study.html">Study Abroad</a></li>
+            <li><a href="work.html">Work Abroad</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="world-map"></div>
+
+        <div class="hero-content">
+            <h1>Explore Global Study & Work Opportunities</h1>
+            <p>
+                Professional immigration guidance, international study admissions,
+                work permits, and career opportunities across the world.
+            </p>
+            <button>Start Your Journey</button>
+        </div>
+    </section>
+
+    <script>
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            navbar.classList.toggle("scrolled", window.scrollY > 40);
+        });
+
+        const menu = document.getElementById("menuList");
+        function toggleMenu() {
+            menu.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
