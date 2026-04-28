@@ -3,7 +3,18 @@
 
   <url>
     <loc>https://www.logicservices.online/</loc>
-    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.logicservices.online/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.logicservices.online/services.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.logicservices.online/contact.html</loc>
   </url>
 
 </urlset>
