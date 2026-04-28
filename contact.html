@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Logic Immigration & IT Services — visa enquiries, IT projects, and general support." />
+  <title>Contact us | Logic Immigration &amp; IT Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav glass" id="nav">
+      <a class="logo" href="index.html">Logic<span class="logo-accent">Immigration</span> &amp; IT Services</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="nav-cta" aria-current="page">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h1>Contact us</h1>
+          <p class="page-lead">
+            Tell us about your visa goals or your next product — we will respond with clear next steps.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact">
+      <div class="container">
+        <div class="contact-wrap glass-panel reveal">
+          <div class="contact-copy">
+            <h2>Start a conversation</h2>
+            <p>We typically reply within one business day. For urgent matters, please call or note it in your message.</p>
+            <ul class="contact-meta">
+              <li><span class="meta-label">Business</span> Logic Immigration &amp; IT Services</li>
+              <li><span class="meta-label">Email</span> <a href="mailto:hello@logicimmigrationit.com">hello@logicimmigrationit.com</a></li>
+              <li><span class="meta-label">Phone</span> <a href="tel:+0000000000">+00 000 000 0000</a></li>
+            </ul>
+          </div>
+          <form class="contact-form" id="contactForm" novalidate>
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Your name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@company.com" required />
+            </label>
+            <label class="field">
+              <span>Interest</span>
+              <select name="interest" required>
+                <option value="">Select…</option>
+                <option value="immigration">Immigration</option>
+                <option value="it">IT services</option>
+                <option value="both">Both</option>
+              </select>
+            </label>
+            <label class="field field-full">
+              <span>Message</span>
+              <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary btn-block">Send message</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">© <span id="year"></span> Logic Immigration &amp; IT Services. All rights reserved.</p>
+      <a href="index.html#top" class="footer-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
