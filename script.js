@@ -86,4 +86,49 @@
       form.reset();
     });
   }
+
+  // Fluid Orb Parallax Effect
+  var orbs = document.querySelectorAll(".orb");
+  if (orbs.length) {
+    // Wrap each orb dynamically to preserve their CSS float animation
+    var orbData = [];
+    orbs.forEach(function (orb, index) {
+      var wrapper = document.createElement("div");
+      wrapper.style.position = "absolute";
+      wrapper.style.inset = "0";
+      wrapper.style.pointerEvents = "none";
+      orb.parentNode.insertBefore(wrapper, orb);
+      wrapper.appendChild(orb);
+      
+      orbData.push({
+        el: wrapper,
+        speed: (index + 1) * 25 // Different depth speeds: 25, 50, 75
+      });
+    });
+
+    var targetX = 0, targetY = 0;
+    var currentX = 0, currentY = 0;
+
+    window.addEventListener("mousemove", function (e) {
+      // Normalize mouse coordinates from -1 to 1
+      targetX = (e.clientX / window.innerWidth - 0.5) * 2;
+      targetY = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+
+    function renderParallax() {
+      // Lerp for fluid motion
+      currentX += (targetX - currentX) * 0.05;
+      currentY += (targetY - currentY) * 0.05;
+
+      orbData.forEach(function (data) {
+        // Invert the movement so orbs shift away from the cursor
+        var x = -currentX * data.speed;
+        var y = -currentY * data.speed;
+        data.el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      });
+
+      requestAnimationFrame(renderParallax);
+    }
+    requestAnimationFrame(renderParallax);
+  }
 })();
